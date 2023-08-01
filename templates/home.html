@@ -1,0 +1,43 @@
+<!DOCTYE html>
+<html>
+  <head>
+    <title>Abiollagh Job Careers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center mt-4 mb-4"> {{ company_name }} Careers</h1>
+    <img class="img-fluid" id="banner" src="https://career-web.abiollagh.repl.co/static/banner.jpg" height="320">
+    <h2 class="text-center mt-4 mb-4"> About Abiollagh </h2>
+    <p class="lead">
+      Lorem ipsum dolor sit amet. Et saepe tempora sit ipsum cumque hic illum
+      cumque. Ut galisum voluptatem qui amet numquam aut unde quaerat eos quae
+      neque aut sapiente laboriosam est enim animi qui veritatis necessitatibus.
+      Ut odit odio id voluptas facilis non accusamus mollitia vel molestiae
+      consequatur qui laboriosam architecto. Aut quia quod ad incidunt assumenda
+      est mollitia earum et enim recusandae. 
+    </p>
+      <div class="text-center">
+    <h2 class="text-center mt-4 mb-4"> Open Positions </h2>
+        </div>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">        
+    <button class="btn btn-primary btn-lg mt-4"> Contact Us </button>
+        <p class="mt-4"> Copyright @2023, Abiollagh</p>
+      </div>
+      </div>
+  </body>
+</html>
